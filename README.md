@@ -1,5 +1,7 @@
 # CRUD USER API
 
+## EU AINDA VOU DOCUMENTAR BONITINHO O PROJETO E COMO RODAR ELE <3 =D
+
 Este projeto é uma API desenvolvida em Node.js, utilizando o framework Express, o ORM Sequelize e o superset de JavaScript, TypeScript. O objetivo principal é fornecer um CRUD de usuários em um banco de dados MySQL, permitindo que as operações de criação, leitura, atualização e exclusão de registros sejam realizadas facilmente.
 
 A API é construída seguindo os princípios RESTful, que definem a forma como as requisições e respostas HTTP devem ser formatadas, garantindo a padronização da comunicação entre os clientes e o servidor. Além disso, a utilização do TypeScript permite uma maior segurança e facilidade de manutenção do código, com a utilização de tipagem forte e recursos de orientação a objetos.
