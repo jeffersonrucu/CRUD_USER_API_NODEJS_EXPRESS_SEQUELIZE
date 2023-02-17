@@ -32,6 +32,7 @@
       "@controllers/*":   ["./app/http/controllers/*"],
       "@daos/*":          ["./app/http/daos/*"],
       "@helpers/*":       ["./app/http/helpers/*"],
+      "@middleware/*":    ["./app/http/middleware/*"],
       "@models/*":        ["./app/models/*"],
       "@routes/*":        ["./routes/*"],
       "@database/*":      ["./database/*"]
