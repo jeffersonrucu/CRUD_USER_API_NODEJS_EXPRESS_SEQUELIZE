@@ -15,3 +15,17 @@ Em resumo, este projeto é uma solução simples e eficiente para a criação de
 No modelo MVC, a camada de Model é responsável por representar os dados do banco de dados, enquanto a camada de View é responsável por lidar com a apresentação dos dados ao usuário. A camada de Controller atua como intermediário entre o Model e a View, processando as solicitações do usuário e fazendo as chamadas necessárias para a camada de Model, garantindo que as regras de negócios sejam seguidas.
 
 A adoção da arquitetura MVC também permite que o projeto seja facilmente expandido, com a adição de novos modelos, visualizações e controladores, sem que isso impacte as demais partes do sistema. Isso torna a manutenção e evolução do código mais simples e eficiente. -->
+
+
+Comandos
+
+```
+$ npx sequelize-cli db:create
+$ npx sequelize-cli db:drop 
+
+$ npx sequelize-cli migration:generate --name nome_da_migration
+$ npx sequelize-cli db:migrate
+
+$ npx sequelize-cli seed:generate --name nome_da_seed     
+$ npx sequelize-cli db:seed:all
+```
