@@ -21,11 +21,41 @@ Comandos
 
 ```
 $ npx sequelize-cli db:create
-$ npx sequelize-cli db:drop 
+$ npx sequelize-cli db:drop
 
 $ npx sequelize-cli migration:generate --name nome_da_migration
 $ npx sequelize-cli db:migrate
 
 $ npx sequelize-cli seed:generate --name nome_da_seed     
 $ npx sequelize-cli db:seed:all
+```
+
+Sequelize Migrate
+aqui está uma lista das opções mais comuns que podem ser usadas ao definir uma coluna em uma migração do Sequelize:
+
+```
+
+type: especifica o tipo de dados da coluna. Alguns dos tipos suportados incluem STRING, INTEGER, BIGINT, FLOAT, DOUBLE, DECIMAL, BOOLEAN, DATE, DATEONLY, TIME, UUID, ARRAY, JSON, JSONB e outros.
+
+allowNull: especifica se a coluna pode ser nula. Se definido como false, a coluna não pode ser nula.
+
+defaultValue: especifica um valor padrão para a coluna. Isso só é usado se o valor não for fornecido ao inserir um registro.
+
+primaryKey: especifica se a coluna é a chave primária da tabela.
+
+autoIncrement: especifica se a coluna é auto-incrementável.
+
+unique: especifica se os valores na coluna devem ser únicos.
+
+references: especifica a tabela e a coluna à qual a coluna atual faz referência. Útil para estabelecer relações entre tabelas.
+
+onUpdate: especifica a ação a ser executada quando o registro referenciado é atualizado. As opções incluem CASCADE, RESTRICT, NO ACTION e SET DEFAULT.
+
+onDelete: especifica a ação a ser executada quando o registro referenciado é excluído. As opções incluem CASCADE, RESTRICT, NO ACTION e SET DEFAULT.
+
+comment: adiciona um comentário à coluna.
+
+validate: uma função de validação personalizada que é executada sempre que a coluna é atualizada ou criada. Essa função deve retornar um erro caso a validação não passe.
+
+
 ```
