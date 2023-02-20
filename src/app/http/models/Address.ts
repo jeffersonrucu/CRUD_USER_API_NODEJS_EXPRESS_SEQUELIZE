@@ -48,4 +48,94 @@ export class Address {
         this.id = id;
     }
 
+    /**
+     * get primary address from address
+     *
+     * @returns string
+    */
+     public getPrimaryAddress(): string {
+        return this.primaryAddress;
+    }
+
+    /**
+     * set primaryAddress from address
+     *
+     * @param primaryAddress
+    */
+    public setPrimaryAddress(primaryAddress: string) {
+        this.primaryAddress = primaryAddress;
+    }
+
+    /**
+     * get latitude from address
+     *
+     * @returns number
+    */
+    public getLatitude(): number {
+        return this.latitude;
+    }
+
+    /**
+     * set latitude from address
+     *
+     * @param latitude
+    */
+    public setLatitude(latitude: number) {
+        this.latitude = latitude;
+    }
+
+    /**
+     * get longitude from address
+     *
+     * @returns number
+    */
+    public getLongitude(): number {
+        return this.longitude;
+    }
+
+    /**
+     * set longitude from address
+     *
+     * @param longitude
+    */
+    public setLongitude(longitude: number) {
+        this.longitude = longitude;
+    }
+
+    /**
+     * get created at from address
+     *
+     * @returns Date
+    */
+    public getCreatedAt(): Date {
+        return this.createdAt;
+    }
+
+    /**
+     * set created at from address
+     *
+     * @param createdAt
+    */
+    public setcreatedAt(createdAt: Date) {
+        this.createdAt = createdAt;
+    }
+
+    /**
+     * get update at from address
+     *
+     * @returns Date
+    */
+    public getUpdatedAt(): Date {
+        return this.updatedAt;
+    }
+
+     /**
+     * set update at from address
+     *
+     * @param updatedAt
+    */
+    public setUpdatedAt(updatedAt: Date) {
+        this.updatedAt = updatedAt;
+    }
+
 }

@@ -26,4 +26,40 @@ export class LegalEntity extends Person {
         this.cnpj = data.cnpj;
     }
 
+    /**
+     * get business name from address
+     *
+     * @returns string
+    */
+    public getBusinessName(): string {
+        return this.businessName;
+    }
+
+    /**
+     * set business name from address
+     *
+     * @param businessName
+    */
+    public setBusinessName(businessName: string) {
+        this.businessName = businessName;
+    }
+
+    /**
+     * get cnpj from address
+     *
+     * @returns string
+    */
+    public getCnpj(): string {
+        return this.cnpj;
+    }
+
+    /**
+     * set cnpj from address
+     *
+     * @param cnpj
+    */
+    public setCnpj(cnpj: string) {
+        this.cnpj = cnpj;
+    }
+
 }

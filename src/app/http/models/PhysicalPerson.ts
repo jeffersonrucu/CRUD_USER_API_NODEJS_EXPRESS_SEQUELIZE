@@ -29,4 +29,57 @@ export class PhysicalPerson extends Person {
         this.birthDate = data.birthDate;
     }
 
+    /**
+     * get cpf from address
+     *
+     * @returns string
+    */
+    public getCpf(): string {
+        return this.cpf;
+    }
+
+    /**
+     * set cpf from address
+     *
+     * @param cpf
+    */
+    public setCpf(cpf: string) {
+        this.cpf = cpf;
+    }
+
+    /**
+     * get gender from address
+     *
+     * @returns string
+    */
+    public getGender(): string {
+        return this.gender;
+    }
+
+    /**
+     * set gender from address
+     *
+     * @param gender
+    */
+    public setGender(gender: string) {
+        this.gender = gender;
+    }
+
+    /**
+     * get birthDate from address
+     *
+     * @returns Date
+    */
+    public getBirthDate(): Date {
+        return this.birthDate;
+    }
+
+    /**
+     * set birthDate from address
+     *
+     * @param birthDate
+    */
+    public setBirthDate(birthDate: Date) {
+        this.birthDate = birthDate;
+    }
 }
