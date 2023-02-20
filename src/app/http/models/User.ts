@@ -1,5 +1,15 @@
+import { sequelize } from '@database/index'
+import { DataTypes, Model } from 'sequelize'
+
 interface UserConstructor {
-    id: number
+    username: string;
+    password: string;
+    email: string;
+    createdAt: Date;
+    updatedAt: Date;
+}
+
+interface UserSequelizeInt extends Model {
     username: string;
     password: string;
     email: string;
@@ -9,7 +19,6 @@ interface UserConstructor {
 
 export class User {
 
-    private id: number;
     private username: string;
     private password: string;
     private email: string;
@@ -22,7 +31,6 @@ export class User {
      * @param data
     */
     constructor(data: UserConstructor) {
-        this.id = data?.id;
         this.username = data?.username;
         this.password = data?.password;
         this.email = data?.email;
@@ -36,7 +44,8 @@ export class User {
      * @returns number
     */
     public getID(): number {
-        return this.id;
+        // return this.id;
+        return 1
     }
 
     /**
@@ -45,7 +54,7 @@ export class User {
      * @param id
     */
     public setID(id: number) {
-        this.id = id;
+        // this.id = id;
     }
 
     /**
@@ -139,3 +148,44 @@ export class User {
     }
 
 }
+
+export const UserSequelize = sequelize.define<UserSequelizeInt>(
+    'user',
+    {
+        id: {
+            type: DataTypes.BIGINT,
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true
+        },
+        username: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true
+        },
+        id_person: {
+            type: DataTypes.BIGINT,
+            references: {
+                model: 'person',
+                key: 'id'
+            }
+        },
+        created_at: {
+            type: DataTypes.DATE,
+            allowNull: false
+        },
+        updated_at: {
+            type: DataTypes.DATE,
+            allowNull: false,
+        }
+    },
+    { tableName: 'user' }
+)
