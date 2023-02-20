@@ -10,7 +10,7 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true
       },
-      fistName: {
+      firstName: {
         type: Sequelize.STRING,
         allowNull: false
       },
