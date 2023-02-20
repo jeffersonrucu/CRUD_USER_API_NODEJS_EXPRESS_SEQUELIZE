@@ -19,13 +19,12 @@ module.exports = {
         allowNull: false,
         unique: true
       },
-      createdAt: {
-        type: Sequelize.DATE,
-        allowNull: false
-      },
-      updatedAt: {
-        type: Sequelize.DATE,
-        allowNull: false
+      id_person: {
+        type: Sequelize.BIGINT,
+        references: {
+          model: 'person',
+          key: 'id'
+        }
       }
     });
   },

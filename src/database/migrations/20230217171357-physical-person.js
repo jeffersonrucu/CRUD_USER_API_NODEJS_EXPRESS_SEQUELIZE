@@ -23,13 +23,12 @@ module.exports = {
         type: Sequelize.CHAR(4),
         allowNull: false
       },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+      id_person: {
+        type: Sequelize.BIGINT,
+        references: {
+          model: 'person',
+          key: 'id'
+        }
       }
     });
   },
