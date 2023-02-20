@@ -12,8 +12,8 @@ router.get('/user', (req, res) => {
             res.json({ password: hashPassword});
         })
         .catch((err) => {
-            res.status(500).json({ 
-                error: err.message 
+            res.status(500).json({
+                error: err.message
             })
         });
 });
@@ -24,8 +24,8 @@ router.get('/login', (req, res) => {
             res.json({ check: result});
         })
         .catch((err) => {
-            res.status(500).json({ 
-                error: err.message 
+            res.status(500).json({
+                error: err.message
             })
         });
 });
